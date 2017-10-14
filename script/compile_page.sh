@@ -14,7 +14,7 @@ extensions=(
     abbreviations
 )
 
-template=template.html
+template=style/template.html
 
 echo "Compile ${html_target}"
 

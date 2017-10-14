@@ -3,15 +3,23 @@
 set -eu
 
 function task_build {
-  make site
+  rsync -ru static/* out/assets/
+  ./script/compile_page.sh content/index.markdown out/index.html
 }
 
 function task_watch {
-  make watch
+  task_build
+  while true;
+  do
+    inotifywait -e modify,close_write,moved_to,moved_from,move,move_self,create,delete,delete_self content style static && task_build
+  done
 }
 
 function task_serve {
-  make serve
+  (
+    cd out
+    python -m http.server 9090
+  )
 }
 
 function task_usage {
