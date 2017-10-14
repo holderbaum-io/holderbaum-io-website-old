@@ -1,1 +1,4 @@
-out/*
+out/
+.bundle/
+vendor/
+.sass-cache/
