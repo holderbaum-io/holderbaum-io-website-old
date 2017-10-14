@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>jakob.io
+$if(title)$
+/ $title$
+$endif$
+</title>
+<meta content='Personal website of Jakob Holderbaum' name='description'>
+<style>
+$highlighting-css$
+</style>
+<style>
+  @font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Merriweather"), url(/assets/vendor/merriweather-400.woff2) format("woff2"); }
+  @font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Merriweather Bold"), url(/assets/vendor/merriweather-700.woff2) format("woff2"); }
+
+  body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.5;
+    font-size: 1.2em;
+    margin: auto;
+    padding: 0.5em;
+    max-width: 40em; }
+
+  body > p {
+    text-align: justify; }
+
+  body a {
+    text-decoration: none;
+    color: #204a87;}
+
+  body a:hover {
+    text-decoration: underline;
+    color: #204a87;}
+
+  code {
+    font-size: 1.1em; }
+
+  .footer {
+    font-size: 0.7em; }
+</style>
+</head>
+<body>
+$if(skip_backlink)$
+$else$
+<center><a href="/">Back to Landing Page...</a></center>
+$endif$
+
+$if(title)$
+<h1>$title$</h1>
+$endif$
+
+$if(date)$
+<div style="text-align: right;font-size: 0.9em;">Created at: $date$</div>
+$endif$
+
+$if(draft)$
+<div style="text-align: center;/*! font-size: 0.9em; */color: darkred;font-weight: bold;border: 2px solid darkred;margin: 1em 0;">
+Disclaimer: This is Work in Progress and thus not intended to be shared!
+</div>
+$endif$
+
+$body$
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+<div class='footer'>
+<center>
+<hr>
+<p>
+<a href='/about.html'>about</a>
+|
+<a href='/mentoring.html'>mentoring</a>
+|
+<a href='https://twitter.com/hldrbm'>twitter</a>
+|
+<a href='https://github.com/holderbaum'>github</a>
+|
+<a href='/imprint.html'>imprint</a>
+</p>
+<p>
+<b>Disclaimer:</b>
+This is my personal website.
+Although I work for
+<a href='https://www.thoughtworks.com/'>ThoughtWorks</a>
+everything on these pages
+is based on my own
+personal opinion and/or experience.
+The expressed views
+can but must not always be
+in line with the views of
+<a href='https://www.thoughtworks.com/'>ThoughtWorks</a>
+or its employees.
+</p>
+<p>
+<img src='/assets/vendor/entypo/code.svg' style='width:2em;heigth:2em'>
+</p>
+</center>
+</div>
+
+</body>
+</html>
