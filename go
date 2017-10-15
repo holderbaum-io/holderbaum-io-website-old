@@ -23,8 +23,12 @@ function task_serve {
   )
 }
 
+function task_deploy {
+  rsync -ruv --delete out/* deploy-holderbaum-io@turing.holderbaum.me:www/
+}
+
 function task_usage {
-  echo "usage: $0 build | watch | serve"
+  echo "usage: $0 build | watch | serve | deploy"
   exit 1
 }
 
@@ -34,5 +38,6 @@ case "$arg" in
   build) task_build ;;
   watch) task_watch ;;
   serve) task_serve ;;
+  deploy) task_deploy ;;
   *) task_usage ;;
 esac
