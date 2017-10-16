@@ -1,4 +1,4 @@
-out/
-.bundle/
-vendor/
-.sass-cache/
+/out/
+/.bundle/
+/vendor/
+/.sass-cache/
