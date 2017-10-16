@@ -1,6 +1,6 @@
 ---
 title: "Jakob Holderbaum | Consulting & Software Development"
-
+landingpage: true
 ---
 
 My name is Jakob.
