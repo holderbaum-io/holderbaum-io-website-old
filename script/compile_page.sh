@@ -1,7 +1,8 @@
 #!/bin/bash -e
 
 markdown_source=$1
-html_target=$2
+out_dir=$2
+html_target="${out_dir}/$(basename "$markdown_source" .markdown).html"
 
 highlight_style=zenburn
 extensions=(
