@@ -61,6 +61,14 @@ p {
   text-align: justify;
 }
 
+.pillbox {
+  text-align: center;
+}
+
+.pillbox > * {
+  text-align: center;
+}
+
 .pill {
   white-space: nowrap;
   margin: 0 0.5em;
