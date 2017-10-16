@@ -8,6 +8,16 @@
   font-style: normal;
   font-weight: 700;
   src: local("OpenSans Bold"), url(/assets/vendor/OpenSans-Bold.ttf) format("ttf"); }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Regular"), url(/assets/vendor/Roboto-Regular.ttf) format("ttf"); }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), url(/assets/vendor/Roboto-Bold.ttf) format("ttf"); }
 
 body > p {
   text-align: justify;
@@ -31,6 +41,26 @@ body > .main {
   line-height: 1.5;
   font-size: 1.2em;
   margin: auto;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
 .footer {
