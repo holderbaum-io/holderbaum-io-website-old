@@ -1,147 +1,51 @@
-@font-face {
-  font-family: 'OpenSans';
-  font-style: normal;
-  font-weight: 400;
-  src: local("OpenSans Regular"), url(/assets/vendor/OpenSans-Regular.ttf) format("ttf"); }
-@font-face {
-  font-family: 'OpenSans';
-  font-style: normal;
-  font-weight: 700;
-  src: local("OpenSans Bold"), url(/assets/vendor/OpenSans-Bold.ttf) format("ttf"); }
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Roboto Regular"), url(/assets/vendor/Roboto-Regular.ttf) format("ttf"); }
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Roboto Bold"), url(/assets/vendor/Roboto-Bold.ttf) format("ttf"); }
+@import 'skeleton/normalize';
+@import 'skeleton/skeleton';
 
-body > p {
-  text-align: justify;
+$_color: (
+  fg: white,
+  bg: #0F2D8C,
+  hl: #CD1F31,
+);
+
+body {
+  border: 1em solid map-get($_color, bg);
 }
 
-body a {
-  text-decoration: underline;
-  color: black;
-}
-
-body a:hover {
-  text-decoration: underline;
-  color: #CD1F31;
-}
-
-body > .main {
-  overflow: auto;
-  max-width: 680px;
-  padding: 0 15px;
-  font-family: 'OpenSans', sans-serif;
-  line-height: 1.5;
-  font-size: 1.2em;
-  margin: auto;
-}
-
-h1 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-}
-
-h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-}
-
-h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-}
-
-h4 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-}
-
-.footer {
-  font-size: 0.7em; }
-
-.header {
-  text-align: center
-}
-
-.header > img {
-  display: block;
-  margin: 1em auto;
-}
-
-.header > .face {
-  width: 200px;
-}
-
-.header > .brand {
-  width: 300px;
-}
-
-.subtext {
-  margin-top: 1em;
-}
-
-p {
-  text-align: justify;
-}
-
-.nav {
+header, footer {
+  background-color: map-get($_color, bg);
+  color: map-get($_color, fg);
   text-align: center;
-  a {
-    color: #2A4CA0;
-    margin: 0 1em;
+}
+
+section {
+  text-align: center;
+}
+
+header {
+  min-height: 500px;
+
+  p {
+    font-size: 3rem;
   }
 }
 
-.pillbox {
+section.attribute {
+  margin-top: 25px;
+
+  img.icon {
+    width: 100px;
+  }
+  hr {
+    width: 100px;
+    height: 5px;
+    border: 0;
+    background-color: map-get($_color, hl);
+
+  }
+}
+
+footer {
+  background-color: map-get($_color, bg);
+  color: map-get($_color, fg);
   text-align: center;
-}
-
-.pillbox > * {
-  text-align: center;
-}
-
-.pill {
-  white-space: nowrap;
-  margin: 0 0.5em;
-  color: white;
-  background-color: #8EAFD9;
-  border-radius: 500px;
-  display: inline-block;
-  height: 2em;
-  vertical-align: middle;
-  margin: 0.4em;
-}
-
-.pill > span {
-  display: inline-block;
-  height: 2em;
-  vertical-align: middle;
-  line-height: 2em;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-.pill a {
-  color: white;
-}
-
-.footer {
-  background: white;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-}
-
-.icon-link {
-  width: 50px;
-  margin: 0 25px;
 }
