@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Quicksand:700');
 
 $main-color: #0000AD;
+$main-color-light: #3232DC;
 $secondary-color: white;
 $accent-color: #F3242C;
 $aux-color: #8FAFD7;
@@ -100,6 +101,59 @@ p {
     }
     .box {
       margin-top: 2rem;
+    }
+  }
+}
+
+.articles-section {
+  text-align: center;
+  margin-top: 5rem;
+  padding-top: 5rem;
+  background-color: $main-color;
+  color: $secondary-color;
+
+  .article-grid {
+    margin-top: 2.5rem;
+  }
+
+  .all-articles-link {
+    width: 100%;
+  }
+
+  .article {
+    padding: 2rem;
+    text-align: left;
+    background-color: $main-color-light;
+    border-radius: 0.5rem;
+    margin-bottom: 4%;
+    min-height: 22rem;
+    position: relative;
+
+    .continue-link {
+      position: absolute;
+      bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      font-size: 1rem;
+      color: $aux-color;
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+    hr {
+      margin: 1.5rem 0;
+      padding: 0;
+      width: 5.5rem;
+      height: 0.3rem;
+      border: 0;
+      background-color: $secondary-color;
     }
   }
 }
