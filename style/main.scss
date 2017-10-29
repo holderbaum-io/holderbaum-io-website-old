@@ -167,4 +167,33 @@ section, header, footer {
 }
 
 .contact-section {
+  ul {
+    position: relative;
+    text-align: left;
+    list-style: none;
+    li {
+      &::before {
+        position: absolute;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+        content: ""
+      }
+
+      margin-left: 40px;
+
+      & > * {
+        padding-left: 1rem;
+      }
+
+      &.contact-address::before {
+        background-image: url(/assets/img/icon-address.png);
+      }
+
+      &.contact-github::before {
+        background-image: url(/assets/img/icon-github.png);
+      }
+    }
+  }
 }
