@@ -75,6 +75,34 @@ section, header, footer {
   }
 }
 
+.navigation {
+  background-color: $main-color;
+  clear: both;
+
+  a {
+    font-family: 'Quicksand', sans-serif;
+    color: $secondary-color;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  .logo {
+    float: left;
+  }
+
+  .links {
+    float: right;
+    list-style: none;
+    li {
+      display: inline;
+    }
+    a {
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+  }
+}
+
 .main-header {
   .face {
     width: 150px;
