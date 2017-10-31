@@ -62,8 +62,8 @@ section, header, footer {
 
 .button {
   font-family: 'Quicksand', sans-serif;
+  border: 2px solid $secondary-color;
   background-color: $secondary-color;
-  border-color: $secondary-color;
   color: $main-color;
   text-transform: none;
   letter-spacing: normal;
@@ -71,7 +71,7 @@ section, header, footer {
 
   &:hover {
     color: $accent-color;
-    border-color: $aux-color;
+    border: 2px solid $accent-color;
   }
 }
 
@@ -167,32 +167,106 @@ section, header, footer {
 }
 
 .contact-section {
+  font-size: 1rem;
+
+  .columns {
+    margin-top: 4rem;
+  }
+
+  input, textarea {
+    background-color: $main-color-light;
+    border-color: $main-color-light;
+    color: $secondary-color;
+    height: auto;
+
+    &:focus {
+      border-color: $secondary-color;
+    }
+  }
+
+  form {
+    text-align: left;
+    float: clear;
+  }
+
+  label {
+    font-weight: normal;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .send-copy {
+    float: left;
+  }
+
+  input.button-send {
+    float: right;
+    background-color: $secondary-color;
+    color: $main-color;
+    text-transform: none;
+      border: 2px solid $secondary-color;
+
+    &:focus, &:hover {
+      color: $accent-color;
+      background-color: $secondary-color;
+      border: 2px solid $accent-color;
+    }
+  }
+
+  a {
+    color: $aux-color;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+
   ul {
-    position: relative;
     text-align: left;
     list-style: none;
     li {
+      position: relative;
+      padding-left: 4rem;
       &::before {
         position: absolute;
         left: 0;
-        width: 40px;
-        height: 40px;
-        background-size: 40px;
+        top: -0.75rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1rem;
+        border: solid 2px $secondary-color;
+        border-radius: 100%;
         content: ""
       }
 
-      margin-left: 40px;
-
-      & > * {
-        padding-left: 1rem;
-      }
+      min-height: 3.5rem;
 
       &.contact-address::before {
-        background-image: url(/assets/img/icon-address.png);
+        background-image: url(/assets/vendor/entypo/location-pin.svg);
+      }
+
+      &.contact-phone::before {
+        background-image: url(/assets/vendor/entypo/phone.svg);
       }
 
       &.contact-github::before {
-        background-image: url(/assets/img/icon-github.png);
+        background-image: url(/assets/vendor/entypo/github.svg);
+      }
+
+      &.contact-twitter::before {
+        background-image: url(/assets/vendor/entypo/twitter.svg);
+      }
+
+      &.contact-mail::before {
+        background-image: url(/assets/vendor/entypo/mail.svg);
+      }
+
+      &.contact-gpg::before {
+        background-image: url(/assets/vendor/entypo/fingerprint.svg);
       }
     }
   }
