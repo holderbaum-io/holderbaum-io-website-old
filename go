@@ -4,15 +4,18 @@ set -eu
 
 function task_build {
   rsync -ru static/* out/assets/
+  mkdir -p out/articles
+  cp content/articles.html out/articles/index.html || true
+  cp content/articles/SharedSecrets.html out/articles/SharedSecrets.html || true
   bundle exec sass --scss style/main.scss out/main.css || true
   ./script/compile_page.sh content/index.markdown out
 }
 
 function task_watch {
-  task_build
   while true;
   do
-    inotifywait -e modify,close_write,moved_to,moved_from,move,move_self,create,delete,delete_self content style static && task_build
+    task_build
+    inotifywait -r -e modify,close_write,moved_to,moved_from,move,move_self,create,delete,delete_self content style static && task_build
   done
 }
 
