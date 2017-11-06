@@ -1,0 +1,26 @@
+companies:
+  - name: ThoughtWorks Germany GmbH
+    ref: thoughtworks
+    link: https://thoughtworks.com/
+    show: true
+    headline: true
+  - name: Jungheinrich AG
+    ref: jungheinrich
+    link: http://www.jungheinrich.com/
+    show: true
+    headline: true
+  - name: METRO Cash & Carry Deutschland GmbH
+    ref: metro
+    link: https://www.metro.de/
+    show: false
+    headline: true
+  - name: Smart Mechatronics GmbH
+    ref: smart-mechatronics
+    link: https://www.smartmechatronics.de/
+    show: true
+    headline: true
+  - name: Neopoly GmbH
+    ref: neopoly
+    link: https://neopoly.com/
+    show: true
+    headline: true

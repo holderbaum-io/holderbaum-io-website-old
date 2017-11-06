@@ -1,0 +1,14 @@
+<section class="references-section">
+  <div class="container">
+    <h2>I have worked with awesome Companies.</h2>
+    <hr class="headline-separator"/>
+    {{ range where $.Site.Data.References.companies ".show" true }}
+    <a href="{{ .link }}">
+      <img class="reference-logo"
+           alt="{{ .name }}" 
+           src="/img/references/{{ .ref }}.png"/>
+    </a>
+    {{ end }}
+    <p>And many more</p>
+  </div>
+</section>
