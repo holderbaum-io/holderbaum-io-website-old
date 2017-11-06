@@ -308,27 +308,27 @@ section, header, footer {
       min-height: 3.5rem;
 
       &.contact-address::before {
-        background-image: url(/assets/vendor/entypo/location-pin.svg);
+        background-image: url(/vendor/entypo/location-pin.svg);
       }
 
       &.contact-phone::before {
-        background-image: url(/assets/vendor/entypo/phone.svg);
+        background-image: url(/vendor/entypo/phone.svg);
       }
 
       &.contact-github::before {
-        background-image: url(/assets/vendor/entypo/github.svg);
+        background-image: url(/vendor/entypo/github.svg);
       }
 
       &.contact-twitter::before {
-        background-image: url(/assets/vendor/entypo/twitter.svg);
+        background-image: url(/vendor/entypo/twitter.svg);
       }
 
       &.contact-mail::before {
-        background-image: url(/assets/vendor/entypo/mail.svg);
+        background-image: url(/vendor/entypo/mail.svg);
       }
 
       &.contact-gpg::before {
-        background-image: url(/assets/vendor/entypo/fingerprint.svg);
+        background-image: url(/vendor/entypo/fingerprint.svg);
       }
     }
   }
