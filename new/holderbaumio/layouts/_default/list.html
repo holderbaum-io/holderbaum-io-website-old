@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+<div class="main main-list">
+<ul>
+  {{ range (where .Data.Pages "Section" "!=" "") }}
+  <li>
+    <a href="{{ .URL }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+</div>
+{{ partial "footer.html" . }}
