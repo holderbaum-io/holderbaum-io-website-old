@@ -1,11 +1,28 @@
 {{ partial "header.html" . }}
+
 <div class="main main-list">
-<ul>
-  {{ range (where .Data.Pages "Section" "!=" "") }}
-  <li>
-    <a href="{{ .URL }}">{{ .Title }}</a>
-  </li>
-  {{ end }}
-</ul>
+  <section class="articles-section section-dark">
+    <div class="container">
+      <h2>I am writing Articles.</h2>
+      <hr class="headline-separator"/>
+      <div class="row article-grid">
+        {{ range (where $.Data.Pages "Dir" "==" "articles/") }}
+          <div class="six columns article">
+            <h3>{{ .Title }}</h3>
+            <hr/>
+            <p>
+            {{ if isset .Params "summary" }}
+              {{ .Params.Summary }}
+            {{ else }}
+              {{ .Summary }}
+            {{ end }}
+            </p>
+            <a href="/articles/SharedSecrets.html" class="continue-link">Continue reading</a>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
 </div>
+
 {{ partial "footer.html" . }}
