@@ -2,45 +2,46 @@
 
 set -eu
 
-function task_build {
-  rsync -ru static/* out/assets/
-  mkdir -p out/articles
-  cp content/articles.html out/articles/index.html || true
-  cp content/articles/SharedSecrets.html out/articles/SharedSecrets.html || true
-  bundle exec sass --scss style/main.scss out/main.css || true
-  ./script/compile_page.sh content/index.markdown out
+function ensure_bundler {
+  if [[ ! -d vendor ]];
+  then
+    bundle install --path vendor/bundle
+    touch vendor
+  fi
+
+  if [[ Gemfile -nt vendor ]] || [[ Gemfile.lock -nt vendor ]];
+  then
+    bundle update
+    touch vendor
+  fi
 }
 
 function task_watch {
-  while true;
-  do
-    task_build
-    inotifywait -r -e modify,close_write,moved_to,moved_from,move,move_self,create,delete,delete_self content style static && task_build
-  done
+  ensure_bundler
+  bundle exec foreman start
 }
 
-function task_serve {
-  (
-    cd out
-    python -m http.server 9090
-  )
+function task_build {
+  ensure_bundler
+  bundle exec sass --scss --style compressed sass/main.scss:static/css/main.css
+  hugo
 }
+
 
 function task_deploy {
-  rsync -ruv --delete out/* deploy-holderbaum-io@turing.holderbaum.me:www/
+  rsync -ruv --delete public/* deploy-holderbaum-io@turing.holderbaum.me:www/
 }
 
 function task_usage {
-  echo "usage: $0 build | watch | serve | deploy"
+  echo "usage: $0 watch | build | deploy"
   exit 1
 }
 
 arg="${1:-}"
 shift || true
 case "$arg" in
-  build) task_build ;;
   watch) task_watch ;;
-  serve) task_serve ;;
+  build) task_build ;;
   deploy) task_deploy ;;
   *) task_usage ;;
 esac

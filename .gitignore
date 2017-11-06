@@ -1,4 +1,5 @@
-/out/
+/public/
+/static/css/*
 /.bundle/
 /vendor/
 /.sass-cache/
