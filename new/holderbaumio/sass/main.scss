@@ -1,13 +1,14 @@
 @import 'skeleton/normalize';
 @import 'skeleton/skeleton';
 
-@import '/css/fonts.css';
-
 $main-color: #0000AD;
 $main-color-light: #3232DC;
 $secondary-color: white;
 $accent-color: #F3242C;
 $aux-color: #8FAFD7;
+
+$main-font: 'Open Sans';
+$accent-font: 'Quicksand';
 
 html {
   font-size: 100%;
@@ -15,7 +16,7 @@ html {
 
 h1, h2, h3 {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: $accent-font, sans-serif;
   font-weight: 500;
   letter-spacing: 0.005rem;
 }
@@ -34,7 +35,7 @@ h3 {
 
 p {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $main-font, sans-serif;
   font-size: 1.3rem;
 }
 
@@ -62,7 +63,7 @@ section, header, footer {
 }
 
 .button {
-  font-family: 'Raleway', sans-serif;
+  font-family: $accent-font, sans-serif;
   font-weight: 500;
   letter-spacing: 1.6px;
   height: auto;
@@ -82,7 +83,7 @@ section, header, footer {
   text-align: center;
   background-color: $main-color;
   clear: both;
-  font-family: 'Raleway', sans-serif;
+  font-family: $accent-font, sans-serif;
   font-weight: 500;
   color: $secondary-color;
   font-size: 1.3rem;
@@ -90,7 +91,7 @@ section, header, footer {
   padding-top: 1rem;
 
   a {
-    font-family: 'Raleway', sans-serif;
+    font-family: $accent-font, sans-serif;
     font-weight: 500;
     color: $secondary-color;
     text-decoration: none;
@@ -260,7 +261,7 @@ section, header, footer {
   }
 
   input.button-send {
-    font-family: 'Raleway', sans-serif;
+    font-family: $accent-font, sans-serif;
     font-weight: 500;
     font-size: 0.9rem;
     float: right;
