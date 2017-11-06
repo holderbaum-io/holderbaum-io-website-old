@@ -21,13 +21,19 @@ function task_watch {
   bundle exec foreman start
 }
 
+function task_build {
+  ensure_bundler
+  bundle exec sass --scss --style compressed sass/main.scss:static/css/main.css sass/fonts.scss:static/css/fonts.css
+  hugo
+}
+
+
 function task_deploy {
-  # rsync -ruv --delete out/* deploy-holderbaum-io@turing.holderbaum.me:www/
-  return
+  rsync -ruv --delete public/* deploy-holderbaum-io@turing.holderbaum.me:www/
 }
 
 function task_usage {
-  echo "usage: $0 watch | deploy"
+  echo "usage: $0 watch | build | deploy"
   exit 1
 }
 
@@ -35,6 +41,7 @@ arg="${1:-}"
 shift || true
 case "$arg" in
   watch) task_watch ;;
+  build) task_build ;;
   deploy) task_deploy ;;
   *) task_usage ;;
 esac
