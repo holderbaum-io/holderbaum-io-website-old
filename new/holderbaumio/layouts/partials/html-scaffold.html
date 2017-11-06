@@ -2,7 +2,11 @@
 <html lang="{{ .Site.LanguageCode }}">
 <head>
   <meta charset="utf-8">
-  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  {{ if eq .Title ""}}
+    <title>{{ .Site.Title }}</title>
+  {{ else }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+  {{ end }}
   <link href='{{ "/css/main.css" | relURL }}' rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
