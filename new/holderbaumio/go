@@ -23,7 +23,7 @@ function task_watch {
 
 function task_build {
   ensure_bundler
-  bundle exec sass --scss --style compressed sass/main.scss:static/css/main.css sass/fonts.scss:static/css/fonts.css
+  bundle exec sass --scss --style compressed sass/main.scss:static/css/main.css
   hugo
 }
 

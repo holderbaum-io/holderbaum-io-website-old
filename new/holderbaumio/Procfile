@@ -1,2 +1,2 @@
-css: sass --scss --style compressed --watch sass/main.scss:static/css/main.css sass/fonts.scss:static/css/fonts.css
+css: sass --scss --watch sass/main.scss:static/css/main.css
 web: hugo serve -D
