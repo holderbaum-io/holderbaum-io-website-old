@@ -1,5 +1,20 @@
 {{ partial "header.html" . }}
 <div class="main main-single">
-{{ .Content }}
+  <header class="main-header section-dark">
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+      <hr class="headline-separator"/>
+    </div>
+  </header>
+
+  <section class="article-details-section">
+    <div class="container">
+      {{ .Content }}
+
+      <div class="article-details-footer">
+        <a class="button all-articles-link" href="/articles/">Browse all Articles</a>
+      </div>
+    </div>
+  </section>
 </div>
 {{ partial "footer.html" . }}
