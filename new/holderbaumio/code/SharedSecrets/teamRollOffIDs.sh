@@ -1,0 +1,3 @@
+$ cat ~/code/app/secrets/.gpg_id
+5244D411CD7CBA95
+44A7B1E354AF81E2
