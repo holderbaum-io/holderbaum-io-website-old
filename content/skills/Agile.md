@@ -3,8 +3,7 @@ title: "I am an Agile Enthusiast"
 index: 1
 ---
 
-I love pairing and any form of social interaction.  Working as a **coach and
-mentor** gives me a lot of pleasure and I really enjoy teaching things I’ve
-learned.  I spend a lot of time with **continuously delivering** high-level
-software systems and low-level embedded systems using **test-first
-methodologies**.
+I spend my time **continuously delivering** software and hardware systems using
+**test-first methodologies**. Working in close collaboration with fellow
+developers, designers, business analysts and product owners through **pairing** and
+**on-site teamwork** is a necessity to successfully realize a product vision.

@@ -12,4 +12,8 @@ Vault,
 Docker,
 Vagrant,
 AWS,
-Heroku
+Heroku,
+Digital Ocean,
+Vim,
+Emacs,
+IntelliJ
