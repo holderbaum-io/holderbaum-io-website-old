@@ -93,7 +93,7 @@ section, header, footer {
     border: 0;
 
     a:not(.button) {
-      color: $aux-color;
+      color: $secondary-color;
       &:hover {
         color: $accent-color;
       }
