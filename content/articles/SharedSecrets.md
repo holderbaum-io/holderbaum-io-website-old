@@ -126,7 +126,7 @@ simultaneously.
 To completely eradicate files
 for reading secrets
 one can make use of
-environment variables (see [12factor app][12factor_env]):
+environment variables (see [12factor app](https://12factor.net/))
 
 {{< highlight JavaScript >}}
 {{< file "exampleEnv.js" >}}
