@@ -42,7 +42,7 @@ function task_deploy {
     eval "$(ssh-agent -s)"
     ssh-add deploy/id_rsa
   fi
-  rsync -ruv --delete public/* deploy-holderbaum-io@turing.holderbaum.me:www/
+  rsync -ruvc --delete public/* deploy-holderbaum-io@turing.holderbaum.me:www/
 }
 
 function task_usage {
