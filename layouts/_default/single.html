@@ -4,6 +4,11 @@
     <div class="container">
       <h1>{{ .Title }}</h1>
       <hr class="headline-separator"/>
+      <p>
+      Created at: {{ .PublishDate.Format "January 2, 2006" }}
+      |
+      Reading time: approx. {{ .ReadingTime }} Minutes
+      <p/>
     </div>
   </header>
 
