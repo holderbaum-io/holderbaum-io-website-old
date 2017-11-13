@@ -1,0 +1,14 @@
+language: go
+addons:
+  ssh_known_hosts:
+    - turing.holderbaum.me
+go:
+  - 1.7
+install:
+  - ./go prepare-ci
+script:
+  - ./go build
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ./go deploy
