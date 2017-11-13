@@ -20,8 +20,8 @@ function task_prepare_ci {
   go get -u -v github.com/spf13/hugo
   if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_BRANCH == "master" ]] ;
   then
-    openssl aes-256-cbc -K $encrypted_29bdd84813a9_key -iv $encrypted_29bdd84813a9_iv -in id_rsa.enc -out id_rsa -d
-    chmod 600 id_rsa
+    openssl aes-256-cbc -K $encrypted_29bdd84813a9_key -iv $encrypted_29bdd84813a9_iv -in deploy/id_rsa.enc -out deploy/id_rsa -d
+    chmod 600 deploy/id_rsa
   fi
 }
 
@@ -37,10 +37,10 @@ function task_build {
 }
 
 function task_deploy {
-  if [[ -f id_rsa ]];
+  if [[ -f deploy/id_rsa ]];
   then
     eval "$(ssh-agent -s)"
-    ssh-add id_rsa
+    ssh-add deploy/id_rsa
   fi
   rsync -ruv --delete public/* deploy-holderbaum-io@turing.holderbaum.me:www/
 }
