@@ -8,7 +8,9 @@
       Created at: {{ .PublishDate.Format "January 2, 2006" }}
       |
       Reading time: approx. {{ .ReadingTime }} Minutes
-      <p/>
+      |
+      <a href="https://github.com/holderbaum/holderbaum-io/blob/{{ $.GitInfo.Hash }}/content/{{ .File.Path }}">View source on GitHub</a>
+      </p>
     </div>
   </header>
 

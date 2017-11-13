@@ -36,7 +36,6 @@ function task_build {
   hugo
 }
 
-
 function task_deploy {
   if [[ -f id_rsa ]];
   then

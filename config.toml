@@ -3,3 +3,4 @@ languageCode = "en-us"
 title = "Jakob Holderbaum"
 disablePathToLower = true
 pygmentsUseClasses = true
+enableGitInfo = true
