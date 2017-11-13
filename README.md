@@ -2,11 +2,11 @@
 
 [![Build Status](https://travis-ci.org/holderbaum/holderbaum-io.svg?branch=master)](https://travis-ci.org/holderbaum/holderbaum-io)
 
-Built with [hugo](), deployed with [travis-ci](), hosted at [hetzner]().
+Built with [hugo](https://gohugo.io/), deployed with [travis-ci](https://travisci.org/), hosted at [hetzner](https://www.hetzner.com/).
 
 ## Run locally
 
-To build on the website including live reload, run:
+To work on the website (including live reload) run:
 
 ```sh
 ./go watch
