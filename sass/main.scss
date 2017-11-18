@@ -236,14 +236,16 @@ input.button, a.button, input.button-send.button-primary {
     width: 100%;
   }
 
-  hr {
-    margin-bottom: 0;
+  &.dark {
+    .article-preview-box {
+      background-color: $main-color-light;
+    }
   }
 
   .article-preview-box {
     padding: 4%;
     text-align: left;
-    background-color: $main-color-light;
+    background-color: $main-color;
     margin-top: 4%;
     margin-bottom: 4%;
     min-height: $article-box-height;
