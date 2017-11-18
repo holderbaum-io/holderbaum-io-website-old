@@ -1,2 +1,2 @@
-css: sass --scss --watch sass/main.scss:static/css/main.css
-web: hugo serve -D
+css: sass/build.sh
+web: sleep 2; vendor/hugo serve -D
