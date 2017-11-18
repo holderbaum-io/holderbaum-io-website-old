@@ -10,4 +10,18 @@
     </p>
     <a class="button" href="#contact">Contact me</a>
   </div>
+  <div class="references-banner">
+    <div class="container">
+      <ul><!--
+      {{ range where $.Site.Data.References.companies ".headline" true }}
+        --><li>
+          <img class="reference-header-logo"
+               alt="{{ .name }}"
+               src="/img/references/{{ .ref }}-header.png"/>
+        </li><!--
+      {{ end }}
+      -->
+      </ul>
+    </div>
+  </div>
 </header>

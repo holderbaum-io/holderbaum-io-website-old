@@ -181,6 +181,37 @@ input.button, a.button, input.button-send.button-primary {
   .introduction {
     margin-bottom: $spacing-default;
   }
+
+  .references-banner {
+    margin-top: $spacing-section;
+    margin-bottom: -$spacing-section;
+    background-color: $main-color-light;
+    border-left: $spacing-small solid $main-color;
+    border-right: $spacing-small solid $main-color;
+    text-align: center;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0;
+        padding: 0;
+        height: 80px;
+        width: 100%;
+        @media screen and (min-width: 860px) {
+          display: inline-block;
+          width: 33.3%;
+        }
+      }
+    }
+
+    .reference-header-logo {
+      $size: 30px;
+      height: $size;
+      margin-top: 25px;
+    }
+  }
 }
 
 .about-section {

@@ -13,12 +13,12 @@ companies:
     ref: metro
     link: https://www.metro.de/
     show: false
-    headline: true
+    headline: false
   - name: Smart Mechatronics GmbH
     ref: smart-mechatronics
     link: https://www.smartmechatronics.de/
     show: true
-    headline: true
+    headline: false
   - name: Neopoly GmbH
     ref: neopoly
     link: https://neopoly.com/
