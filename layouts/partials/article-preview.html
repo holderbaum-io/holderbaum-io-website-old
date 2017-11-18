@@ -3,6 +3,7 @@
   <h3>{{ .Title }}</h3>
   </a>
   <hr/>
+  <div class="summary">
   <p>
   {{ if isset .Params "summary" }}
     {{ .Params.Summary }}
@@ -10,5 +11,6 @@
     {{ .Summary }}
   {{ end }}
   </p>
+  </div>
   <a href="{{ .RelPermalink }}" class="continue-link">Continue reading</a>
 </div>
