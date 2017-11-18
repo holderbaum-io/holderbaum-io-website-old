@@ -4,18 +4,7 @@
     <hr class="headline-separator"/>
     <div class="row article-grid">
     {{ range where $.Data.Pages "Dir" "==" "articles/" }}
-      <div class="six columns article">
-        <h3>{{ .Title }}</h3>
-        <hr/>
-        <p>
-        {{ if isset .Params "summary" }}
-          {{ .Params.Summary }}
-        {{ else }}
-          {{ .Summary }}
-        {{ end }}
-        </p>
-        <a href="{{ .RelPermalink }}" class="continue-link">Continue reading</a>
-      </div>
+      {{ partial "article-preview.html" . }}
     {{ end }}
     </div>
     <a class="button all-articles-link" href="/articles/">Browse all Articles</a>

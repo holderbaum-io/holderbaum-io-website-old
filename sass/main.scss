@@ -240,7 +240,7 @@ input.button, a.button, input.button-send.button-primary {
     margin-bottom: 0;
   }
 
-  .article {
+  .article-preview-box {
     padding: 4%;
     text-align: left;
     background-color: $main-color-light;
@@ -249,14 +249,28 @@ input.button, a.button, input.button-send.button-primary {
     min-height: $article-box-height;
     border-radius: 4px;
     position: relative;
+    color: $secondary-color;
 
     p, a {
       font-size: $font-small;
     }
 
+    a.no-hl {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+        color: $accent-color;
+      }
+    }
+
     .continue-link {
+      color: inherit;
       position: absolute;
       bottom: 2rem;
+      &:hover {
+        color: $accent-color;
+      }
     }
 
     hr {

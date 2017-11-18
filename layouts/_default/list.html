@@ -1,24 +1,20 @@
 {{ partial "header.html" . }}
 
 <div class="main main-list">
-  <section class="articles-section dark">
+  <section class="articles-header-section dark">
     <div class="container">
-      <h2>I am writing Articles.</h2>
+      <h2>I am sharing what I learn.</h2>
       <hr class="headline-separator"/>
+      <p>
+      I speak on conferences and write articles for my blog and various publishers.
+      </p>
+    </div>
+  </section>
+  <section class="articles-section">
+    <div class="container">
       <div class="row article-grid">
         {{ range (where $.Data.Pages "Dir" "==" "articles/") }}
-          <div class="six columns article">
-            <h3>{{ .Title }}</h3>
-            <hr/>
-            <p>
-            {{ if isset .Params "summary" }}
-              {{ .Params.Summary }}
-            {{ else }}
-              {{ .Summary }}
-            {{ end }}
-            </p>
-            <a href="{{ .RelPermalink }}" class="continue-link">Continue reading</a>
-          </div>
+          {{ partial "article-preview.html" . }}
         {{ end }}
       </div>
     </div>

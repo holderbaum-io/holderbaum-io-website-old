@@ -1,0 +1,14 @@
+<div class="six columns article-preview-box">
+  <a class="no-hl" href="{{ .RelPermalink }}">
+  <h3>{{ .Title }}</h3>
+  </a>
+  <hr/>
+  <p>
+  {{ if isset .Params "summary" }}
+    {{ .Params.Summary }}
+  {{ else }}
+    {{ .Summary }}
+  {{ end }}
+  </p>
+  <a href="{{ .RelPermalink }}" class="continue-link">Continue reading</a>
+</div>
