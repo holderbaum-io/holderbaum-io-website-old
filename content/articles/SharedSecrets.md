@@ -1,8 +1,8 @@
 ---
 title: "Managing Team Secrets Effectively"
 date: 2016-09-15
-summary: "How to share secret information among your team members in a secure
-and automation friendly fashion."
+summary: "How to share secret information among your team members in a secure and automation friendly fashion."
+
 ---
 
 What are shared secrets?
