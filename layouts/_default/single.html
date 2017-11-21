@@ -8,8 +8,10 @@
       Created at: {{ .PublishDate.Format "January 2, 2006" }}
       |
       Reading time: approx. {{ .ReadingTime }} Minutes
-      |
-      <a href="https://github.com/holderbaum/holderbaum-io/blob/{{ $.GitInfo.Hash }}/content/{{ .File.Path }}">View source on GitHub</a>
+      {{ if $.GitInfo }}
+        |
+        <a href="https://github.com/holderbaum/holderbaum-io/blob/{{ $.GitInfo.Hash }}/content/{{ .File.Path }}">View source on GitHub</a>
+      {{ end }}
       </p>
     </div>
   </header>
