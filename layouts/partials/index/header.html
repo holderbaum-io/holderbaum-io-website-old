@@ -15,9 +15,11 @@
       <ul><!--
       {{ range where $.Site.Data.References.companies ".headline" true }}
         --><li>
+          <a href="{{ .link }}">
           <img class="reference-header-logo"
                alt="{{ .name }}"
                src="/img/references/{{ .ref }}-header.png"/>
+           </a>
         </li><!--
       {{ end }}
       -->
