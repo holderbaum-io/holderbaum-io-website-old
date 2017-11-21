@@ -8,6 +8,7 @@
   </section>
   <section class="articles-section">
     <div class="container article-grid">
+      <a class="button back-link" href="/">Back to Landing Page</a>
         {{ range $index, $article := (where $.Data.Pages "Dir" "==" "articles/") }} 
           {{ if modBool $index 2 }}
             {{ if gt $index 0 }}
@@ -18,6 +19,7 @@
           {{ partial "article-preview.html" $article }}
         {{ end }}
       </div>
+      <a class="button back-link" href="/">Back to Landing Page</a>
     </div>
   </section>
 </div>
