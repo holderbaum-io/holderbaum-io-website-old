@@ -232,6 +232,17 @@ input.button, a.button, input.button-send.button-primary {
 .article-details-section {
   text-align: left;
 
+
+  p, a, ul, li {
+    font-size: 1.3rem;
+    font-family: $main-font;
+  }
+
+  figure {
+    margin: $spacing-default;
+    text-align: center;
+  }
+
   p {
     margin-bottom: $spacing-default;
   }
@@ -284,7 +295,7 @@ input.button, a.button, input.button-send.button-primary {
     position: relative;
     color: $secondary-color;
 
-    p, a {
+    p, a, ul, li {
       font-size: $font-small;
     }
 
