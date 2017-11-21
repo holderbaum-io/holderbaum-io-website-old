@@ -344,12 +344,8 @@ input.button, a.button, input.button-send.button-primary {
     margin-top: $spacing-inner-section;
   }
 
-  .send-copy {
-    float: left;
-  }
-
   input.button-send {
-    float: right;
+    width: 100%;
   }
 
   ul {
