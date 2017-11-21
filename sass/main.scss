@@ -241,6 +241,17 @@ input.button, a.button, input.button-send.button-primary {
   figure {
     margin: $spacing-default;
     text-align: center;
+    &.small {
+      img {
+        width: 100%;
+        @media (min-width: 750px) {
+          width: 60%;
+        }
+        @media (min-width: 1000px) {
+          width: 40%;
+        }
+      }
+    }
   }
 
   p {
