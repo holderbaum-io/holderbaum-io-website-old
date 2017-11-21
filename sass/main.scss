@@ -30,7 +30,7 @@ $hr-height: 0.3rem;
 $hr-width: 5.5rem;
 $button-border: 0.2rem;
 $contact-icon-border: 0.2rem;
-$article-box-height: 25rem;
+$article-box-height: 27rem;
 $reference-logo-width: 240px;
 $skills-icon-width: 100px;
 $main-face-width: 150px;
@@ -264,6 +264,7 @@ input.button, a.button, input.button-send.button-primary {
 
 .articles-section {
   .all-articles-link {
+    margin-top: 4%;
     width: 100%;
   }
 
@@ -278,7 +279,6 @@ input.button, a.button, input.button-send.button-primary {
     text-align: left;
     background-color: $main-color;
     margin-top: 4%;
-    margin-bottom: 4%;
     min-height: $article-box-height;
     border-radius: 4px;
     position: relative;

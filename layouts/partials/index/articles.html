@@ -1,11 +1,15 @@
 <section class="articles-section dark">
-  <div class="container">
+  <div class="container article-grid">
     {{ partial "articles-header.html" . }}
-    <div class="row article-grid">
-    {{ range where $.Data.Pages "Dir" "==" "articles/" }}
-      {{ partial "article-preview.html" . }}
-    {{ end }}
-    </div>
+      {{ range $index, $article := first 2 (where $.Data.Pages "Dir" "==" "articles/") }} 
+        {{ if modBool $index 2 }}
+          {{ if gt $index 0 }}
+            </div>
+          {{ end }}
+          <div class="row">
+        {{ end }}
+        {{ partial "article-preview.html" $article }}
+      {{ end }}
     <a class="button all-articles-link" href="/articles/">Browse all Articles</a>
   </div>
 </section>
