@@ -79,6 +79,7 @@ function task_deploy {
     ssh-add deploy/id_rsa
   fi
   rsync -ruvc --delete public/* deploy-holderbaum-io@turing.holderbaum.me:www/
+  rsync -ruvc --delete conf.d/* deploy-holderbaum-io@turing.holderbaum.me:conf.d/
 }
 
 function task_usage {
