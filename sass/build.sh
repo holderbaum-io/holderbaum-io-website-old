@@ -8,6 +8,6 @@ compile_stylesheets
 
 while true;
 do 
-  inotifywait sass/*
+  inotifywait -e move_self,modify sass/*
   compile_stylesheets
 done
