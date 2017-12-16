@@ -179,6 +179,8 @@ input.button, a.button, input.button-send.button-primary {
   }
 
   .introduction {
+    max-width: 20em;
+    margin: 0 auto;
     margin-bottom: $spacing-default;
   }
 
