@@ -12,7 +12,7 @@ companies:
   - name: METRO Cash & Carry Deutschland GmbH
     ref: metro
     link: https://www.metro.de/
-    show: false
+    show: true
     headline: false
   - name: Smart Mechatronics GmbH
     ref: smart-mechatronics
