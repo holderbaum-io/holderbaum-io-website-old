@@ -44,6 +44,33 @@ Let's have a look at some of the issues that made those incidents possible.
 
 ## Pitfall: Actual E-Mail Adresses
 
+It is just too tempting to use 
+straightforward email addresses for testing purposes like:
+`mail@email.com` or `john@test.com`.
+And while this might often look like adresses that do not exist,
+you can never be sure.
+Once your data accidentially reaches a productive system,
+maybe a service that sends out emails to newly registered users,
+you will find out wether those adresses are actually bogus.
+
+### How to fix this?
+
+IANA specifies a specific standard for exactly that purpose:
+[RFC6761](http://www.iana.org/go/rfc6761).
+Besides other things, this standard defines a list of domains
+that are guaranteed to be valid and resolve to an actual IP.
+**But**, they can not be registered by any party.
+Those domains are mainly:
+
+* example.org
+* example.net
+* example.com
+
+Whenever you use one of those domains
+as base for your testing email addresses
+(e.g. `testuser1@example.org`)
+you can be sure that noone receives an accidential email.
+
 ## Pitfall: Existing Names
 
 ## Pitfall: Bogus Websites
