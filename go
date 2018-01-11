@@ -3,16 +3,16 @@
 set -eu
 
 function ensure_bundler {
-  if [[ ! -d vendor ]];
+  if [[ ! -d vendor/bundle ]];
   then
     bundle install --path vendor/bundle
-    touch vendor
+    touch vendor/bundle
   fi
 
-  if [[ Gemfile -nt vendor ]] || [[ Gemfile.lock -nt vendor ]];
+  if [[ Gemfile -nt vendor/bundle ]] || [[ Gemfile.lock -nt vendor/bundle ]];
   then
     bundle update
-    touch vendor
+    touch vendor/bundle
   fi
 }
 
