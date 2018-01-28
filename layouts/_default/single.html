@@ -6,8 +6,10 @@
       <hr class="headline-separator"/>
       <p>
       Created at: {{ .PublishDate.Format "January 2, 2006" }}
+      {{ if not (isset .Params "video") }}
       |
       Reading time: approx. {{ .ReadingTime }} Minutes
+      {{ end }}
       {{ if $.GitInfo }}
         |
         <a href="https://github.com/holderbaum/holderbaum-io/blob/{{ $.GitInfo.Hash }}/content/{{ .File.Path }}">View source on GitHub</a>

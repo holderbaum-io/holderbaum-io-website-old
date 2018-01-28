@@ -7,6 +7,8 @@
   <p>
   {{ if isset .Params "summary" }}
     {{ .Params.Summary }}
+  {{ else if isset .Params "image" }}
+    <img src="/img/articles/{{ .Params.image }}" title="Title Image" >
   {{ else }}
     {{ .Summary }}
   {{ end }}
