@@ -4,6 +4,8 @@
     <div class="container">
       <h2>{{ .Title }}</h2>
       <hr class="headline-separator"/>
+
+      {{ if not (isset .Params "blank") }}
       <p>
       Created at: {{ .PublishDate.Format "January 2, 2006" }}
       {{ if not (isset .Params "video") }}
@@ -15,6 +17,8 @@
         <a href="https://github.com/holderbaum/holderbaum-io/blob/{{ $.GitInfo.Hash }}/content/{{ .File.Path }}">View source on GitHub</a>
       {{ end }}
       </p>
+      {{ end }}
+
     </div>
   </header>
 
@@ -22,9 +26,11 @@
     <div class="container">
       {{ .Content }}
 
+      {{ if not (isset .Params "blank") }}
       <div class="article-details-footer">
         <a class="button all-articles-link" href="/articles/">Browse all Articles</a>
       </div>
+      {{ end }}
     </div>
   </section>
 </div>
