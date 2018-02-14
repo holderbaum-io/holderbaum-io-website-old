@@ -3,9 +3,11 @@
   {{ $subsection := (substr .File.LogicalName 0 -3) }}
   <section class="about-section">
     <div class="container">
+      {{ if not (isset .Params "blank") }}
       <img class="icon" alt="Icon describing the about section named '{{ $subsection }}'" src="/img/skills-{{ lower $subsection }}.png"/>
       <h2>{{ .Title }}</h2>
       <hr class="headline-separator"/>
+      {{ end }}
       <p class="description">
         {{ .Content }}
       </p>
