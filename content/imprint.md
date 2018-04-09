@@ -17,7 +17,7 @@ Telefon: +49 (0) 176 / 637 297 71
 
 
 ### Umsatzsteuer:
-Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: 214 / 5094 / 3073
+Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE316888017
 
 
 ### Streitschlichtung
