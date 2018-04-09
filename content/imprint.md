@@ -13,7 +13,7 @@ Adolphstr. 18
 
 
 ### Kontakt:
-Telefon: +49 (0) 176 / 637 297 71
+Telefon: +49 (0) 151 / 708 161 45
 
 
 ### Umsatzsteuer:
