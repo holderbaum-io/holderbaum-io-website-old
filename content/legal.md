@@ -6,10 +6,12 @@ blank: true
 
 ## Angaben gemäß § 5 TMG:
 
-Holderbaum Consulting  
-Jakob Holderbaum  
+Holderbaum GmbH  
 Adolphstr. 18  
 50679 Köln  
+
+Handelsregister: HRB 94561  
+Registration court: Amtsgericht Köln  
 
 
 ### Kontakt:
@@ -17,7 +19,7 @@ Telefon: +49 (0) 151 / 708 161 45
 
 
 ### Umsatzsteuer:
-Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE316888017
+Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE319672148
 
 
 ### Streitschlichtung
