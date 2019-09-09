@@ -48,12 +48,14 @@ function ensure_wt {
   )
 }
 
-function task_prepare_ci {
-  if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_BRANCH == "master" ]] ;
-  then
-    openssl aes-256-cbc -K $encrypted_29bdd84813a9_key -iv $encrypted_29bdd84813a9_iv -in deploy/id_rsa.enc -out deploy/id_rsa -d
-    chmod 600 deploy/id_rsa
-  fi
+function prepare_ci {
+  if [[ -z "${TRAVIS:=}" ]]; then return 0; fi
+
+  sudo apt-get \
+    install \
+    -y \
+    lftp
+
 }
 
 function task_watch {
@@ -73,13 +75,18 @@ function task_build {
 }
 
 function task_deploy {
-  if [[ -f deploy/id_rsa ]];
-  then
-    eval "$(ssh-agent -s)"
-    ssh-add deploy/id_rsa
-  fi
-  rsync -ruvc --delete public/* deploy-holderbaum-io@turing.holderbaum.me:www/
-  rsync -ruvc --delete conf.d/* deploy-holderbaum-io@turing.holderbaum.me:conf.d/
+  prepare_ci
+
+  set -x
+  lftp -c "
+    set ftps:initial-prot \"\";
+    set ftp:ssl-force true;
+    set ftp:ssl-protect-data true;
+    set dns:order \"inet\";
+    open ftp://$DEPLOY_USER:$DEPLOY_PASS@www151.your-server.de:21;
+    mirror -eRv public .;
+    quit;"
+
 }
 
 function task_usage {
@@ -90,7 +97,6 @@ function task_usage {
 arg="${1:-}"
 shift || true
 case "$arg" in
-  prepare-ci) task_prepare_ci ;;
   watch) task_watch ;;
   build) task_build ;;
   deploy) task_deploy ;;

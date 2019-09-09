@@ -1,14 +1,18 @@
 language: generic
 addons:
   ssh_known_hosts:
-    - turing.holderbaum.me
+  - turing.holderbaum.me
 go:
-  - 1.7
+- 1.7
 install:
-  - ./go prepare-ci
+- "./go prepare-ci"
 script:
-  - ./go build
+- "./go build"
 deploy:
   skip_cleanup: true
   provider: script
-  script: ./go deploy
+  script: "./go deploy"
+env:
+  global:
+  - secure: Q3gam9IaSuLDFH7MtFUcoVWIyE9yKTOiCw2dmL9gYUJ416VfDw0Df7RBFySLcGcrlC5Eo4QPJvvGVToGHgqyiUHYp/AyVxJKrfNXXw7MCG7+GujmX/W7Q+u96mJCFGFh0EZ6He/oA83lzKyc4WtWnR94IhZD1ormGxKhk+E0pr6cZ9F5nn4Ek75Ht3gBTpUsJKsL74Bwm1jC4AXcFLaY+tno6vmEdv4pG8Z4lCKo4qaPfUv6fQMy8grkhHu5nTpzh8sA+200Fbe4qm1eYTwCYi5ImFasUhsmciOLLivY4Sb7n/Z3XQlJ8M6Ft6qwvhop4sQw2Xr1VvmUJ2KeQAgbY36/KJ5wED/DB0yHyGmNFTaoYb6WVmX7BJGaXe6qpwgSXkt2k0AcdA/NlOXaGsWQUpLjTK1R5Eet2rnQaJHSERvq1k7QjeP86ay731DJBzP0Snj2lov69aWsyp3yuk8baMLWRD5yw3kLD0OPIrDUaFGdLL1kSsdWW1jpt/8aIeTzkl0w1d4pe6GqOoCiKlOJ0ViDWiRVYRphgMMRx+On/p7WZOyXOr1cErnHioiI0jfezimyNxrWm0MJ3GV/Y5rlfzoq+20UZL/X7zyPb0HkB5fmGWtLYGBT9YGygQVcGAULs3ozOGTUM61aDm7XV9B1N5X1gG3IBrtNVv8I1KDusnU=
+  - secure: pVnMDW911/KME9+DpMe2SLYhKh8mQ/Qz5N9W9QQGr86SpTEMlBfnQLJ/IijF6ucWSXVfxw5OqgYnm3yvjh7r9GLdW8Uo0vC3+6XrGhWoNBKwuPr6ryuXYECr2wFrESAyytWo19cB6l5/tU/GuvmAiE8pVcmWfPld+gM7W5hjkBcfz9G5NeBVIddd35ClizsW1u73D7j2UIVspbdFUCyIL0OreVk1I7+r8dCEHU5HC+YHmG+4U3CswpC3s6vrDh0LEyhKNAyS4Bj1jhTf4giSCHEVmbYL4m5f3Fnqqmjiv1RqSsXBFm7i1XsMB/K7gdR1yqCO7H7ugtrrrcDpzTIhdYKGGoEUpvV04XYT/nOyVSndezS9N2X8yMjdgw9Kztfpvld5rvYusLRpSpgvs/yqF2wXtOV8ThEf+AFwxCEm8933yyEOl90m9LWNbMDjj/EGVtft9mXXJYgGuKqi/xDIZD/zk9I1aqkq16NKQk4vNWvnjW1CEz6S1UZECfKk7pRvQdtEuwp/5pYY7naUM9tAfhOdBxAbr1GdlI5aB9r0KL30SFZLkZ82RYKpGzsGOLxFZAeBOM7GS9ROCvD1wlK/DWa0GdUJgncVCi4TDsDLTuMRqk46MjDcCPo8O7lGzJ5uFQmvPEq7YHT0Q1ELjYorz6PuY0ux3ezgvDVeEptidOU=
