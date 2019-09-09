@@ -8,4 +8,6 @@ build:
 
 deploy:
   script: "./go deploy"
+  needs:
+    - "build"
 
