@@ -1,12 +1,14 @@
 image: golang:1.7
 
 build:
+  stage: "build"
   script: "./go build"
   artifacts:
     paths:
       - "public/"
 
 deploy:
+  stage: "deploy"
   script: "./go deploy"
   needs:
     - "build"
