@@ -4,8 +4,7 @@ addons:
   - turing.holderbaum.me
 go:
 - 1.7
-install:
-- "./go prepare-ci"
+install: true
 script:
 - "./go build"
 deploy:
