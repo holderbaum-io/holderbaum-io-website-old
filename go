@@ -49,7 +49,7 @@ function ensure_wt {
 }
 
 function prepare_ci {
-  if [[ -z "${TRAVIS:=}" ]]; then return 0; fi
+  if [[ -z "${CI:=}" ]]; then return 0; fi
 
   sudo apt-get \
     install \
