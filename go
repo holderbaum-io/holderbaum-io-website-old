@@ -51,7 +51,8 @@ function ensure_wt {
 function prepare_ci {
   if [[ -z "${CI:=}" ]]; then return 0; fi
 
-  sudo apt-get \
+  apt-get update
+  apt-get \
     install \
     -y \
     lftp
