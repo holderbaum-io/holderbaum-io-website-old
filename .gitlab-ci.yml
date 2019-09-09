@@ -1,0 +1,11 @@
+image: golang:1.7
+
+build:
+  script: "./go build"
+  artifacts:
+    paths:
+      - "public/"
+
+deploy:
+  script: "./go deploy"
+
