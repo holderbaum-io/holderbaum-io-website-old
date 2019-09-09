@@ -1,8 +1,8 @@
 # holderbaum.io website
 
-[![Build Status](https://travis-ci.org/holderbaum/holderbaum-io.svg?branch=master)](https://travis-ci.org/holderbaum/holderbaum-io)
+[![Build Status](https://gitlab.com/holderbaum/holderbaum-io/badges/master/pipeline.svg)](https://gitlab.com/holderbaum/holderbaum-io/pipelines)
 
-Built with [hugo](https://gohugo.io/), deployed with [travis-ci](https://travisci.org/), hosted at [hetzner](https://www.hetzner.com/).
+Built with [hugo](https://gohugo.io/), deployed with [gitlab-ci](https://gitlab.com/), hosted at [hetzner](https://www.hetzner.com/).
 
 ## Run locally
 
