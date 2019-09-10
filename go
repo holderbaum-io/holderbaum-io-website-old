@@ -78,16 +78,11 @@ function task_build {
 function task_deploy {
   prepare_ci
 
-  set -x
-  lftp -c " \
-    set ftps:initial-prot ''; \
-    set ftp:ssl-force true; \
-    set ftp:ssl-protect-data true; \
-    set dns:order 'inet'; \
-    open ftp://$DEPLOY_USER:$DEPLOY_PASS@www151.your-server.de:21; \
-    mirror -eRv public .; \
-    quit;"
-
+  lftp \
+    -c " \
+      open $DEPLOY_USER:$DEPLOY_PASS@www151.your-server.de; \
+      mirror --reverse --verbose --delete public/ .; \
+      "
 }
 
 function task_usage {
