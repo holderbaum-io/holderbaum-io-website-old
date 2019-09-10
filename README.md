@@ -1,6 +1,6 @@
 # holderbaum.io website
 
-[![Build Status](https://gitlab.com/holderbaum/holderbaum-io/badges/master/pipeline.svg)](https://gitlab.com/holderbaum/holderbaum-io/pipelines)
+[![Build Status](https://gitlab.com/holderbaum-io/holderbaum-io-website-old/badges/master/pipeline.svg)](https://gitlab.com/holderbaum-io/holderbaum-io-website-old/pipelines)
 
 Built with [hugo](https://gohugo.io/), deployed with [gitlab-ci](https://gitlab.com/), hosted at [hetzner](https://www.hetzner.com/).
 
