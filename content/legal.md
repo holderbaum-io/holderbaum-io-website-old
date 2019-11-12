@@ -7,8 +7,8 @@ blank: true
 ## Angaben gemäß § 5 TMG:
 
 Holderbaum GmbH  
-Adolphstr. 18  
-50679 Köln  
+Holbeinstr. 59  
+50226 Frechen
 
 Handelsregister: HRB 94561  
 Registration court: Amtsgericht Köln  
